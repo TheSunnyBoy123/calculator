@@ -1,20 +1,30 @@
 import math
-def userinput():
-    num1 = int(input("Enter your first number \n"))
-    num2 = int(input("Enter your second number \n"))
-    m = 0
+m = 0
+
+def userinput(m):
+    a = input("Enter your first number \n")
+    b = input("Enter your second number \n")
+    if (a=="m"):
+        a=m
+    else:
+        a= int(a)
+    if(b=="m"):
+        a=m
+    else:
+        b =int(b)
+
     x=input("add(+), sub(-), mul(*), div(/), factorial(!),power(^)")
     if x=="+":
         add(a,b,m)
-    elif x=="":
+    elif x=="-":
         subtract(a,b,m)
     elif x=="*":
         multiply(a,b,m)
     elif x=="/":
-        div(a,b,m):
-    elif x=="":
+        div(a,b,m)
+    elif x=="!":
         factorial(a,b,m)
-    elif x=="":
+    elif x=="^":
         power(a,b,m)
     else:
         print("i didnt understand what you want to execute")
@@ -25,38 +35,41 @@ def add(a, b, m):
     print(a+b)
     userChoice = input("would you like to add to memory?")
     if userChoice == "yes" or userChoice == "y":
-        addtoMemory(a+b)
+        addtoMemory(int(a+b))
 
 def subtract(a, b, m):
     print(a-b)
     userChoice = input("would you like to add to memory?")
     if userChoice == "yes" or userChoice == "y":
-        addtoMemory(a-b)
+        addtoMemory(int(a-b))
 
 def multiply(a, b, m):
     print(a*b)
     userChoice = input("would you like to add to memory?")
     if userChoice == "yes" or userChoice == "y":
-        addtoMemory(a*b)
+        addtoMemory(int(a*b))
 
 def factorial(a,b,m):
     print(math.factorial(a))
     userChoice = input("would you like to add to memory?")
     if userChoice == "yes" or userChoice == "y":
-        addtoMemory((math.factorial(a)))
+        addtoMemory(int(math.factorial(a)))
 
 def div(a,b,m):
     print(a/b)
     userChoice = input("would you like to add to memory?")
     if userChoice == "yes" or userChoice == "y":
-        addtoMemory(a/b)
+        addtoMemory(float(a/b))
 
 def power(a,b,m):
-    print("a^b =" a**b
+    print("a^b =", a**b)
     userChoice = input("would you like to add to memory?")
     if userChoice == "yes" or userChoice == "y":
-        addtoMemory(a**b)
+        addtoMemory(int(a**b))
 
 
-def addtoMemory(x):
-    m = x
+def addtoMemory(y):
+    m = y
+    print(m)
+    userinput(m)
+userinput(m)
